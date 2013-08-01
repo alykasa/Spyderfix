@@ -95,25 +95,111 @@
         $(function() {
             $("#body > div").accordion({ header: "h1", collapsible: true, active: false });
 
-            if($('h1').hasClass('active')) {
-	            
-	        }
-	        else {
-	            
-	        }
+            $('#body > div > h1').click(function() {
+			  $(this).find('.summary').toggle();
+			});
+
+
+		        
+		    
 
 
         })
     })(jQuery);
 
+$(function(){
+    $('.nav.row').data('size','big');
+});
 
+$(window).scroll(function(){
+    if($(document).scrollTop() > 0)
+    {
+        if($('.nav.row').data('size') == 'big')
+        {
+            $('.nav.row').data('size','small');
+            $('.nav.row').stop().animate({
+                height:'70px'
+            },500);
+            $('#logo').stop().animate({
+                height:'30px'
+            },500);
+            $('.nav.row .tooltip img').stop().animate({
+                height:'30px',
+                padding: '0'
+            },500);
+            $('#pasteHere').stop().animate({
+                fontSize: '12px'
+            },500);
+        }
+    }
+    else
+    {
+        if($('.nav.row').data('size') == 'small')
+        {
+            $('.nav.row').data('size','big');
+            $('.nav.row').stop().animate({
+                height:'143px'
+            },500);
+            $('#logo').stop().animate({
+                height:'66px'
+            },500);
+            $('.nav.row .tooltip img').stop().animate({
+                height:'55px'
+            },500);
+            $('#pasteHere').stop().animate({
+                fontSize: '16px'
+            },500);
+        }  
+    }
+});
+
+// STICKY HEADERS
+function UpdateTableHeaders() {
+   $(".persist-area").each(function() {
+   
+       var el             = $(this),
+           offset         = el.offset(),
+           scrollTop      = $(window).scrollTop(),
+           floatingHeader = $(".persist-header", this);
+       
+       if ((scrollTop > offset.top) && (scrollTop < offset.top + el.height()) && (floatingHeader.hasClass('ui-accordion-header-active'))) {
+           floatingHeader.addClass("floatingHeader");//.css({
+           //  "visibility": "visible"
+           // });
+       } else {
+           floatingHeader.removeClass("floatingHeader");//.css({
+           //  "visibility": "hidden"
+           // });      
+       };
+   });
+}
+
+// DOM Ready      
+$(function() {
+
+   // var clonedHeaderRow;
+
+   // $(".persist-area").each(function() {
+   //     clonedHeaderRow = $(".persist-header", this);
+   //     // clonedHeaderRow
+   //       //.before(clonedHeaderRow.clone())
+   //       //.css("width", clonedHeaderRow.width())
+   //       // .addClass("floatingHeader");
+         
+   // });
+   
+   $(window)
+    .scroll(UpdateTableHeaders)
+    .trigger("scroll");
+   
+});
 </script>
 
 <!--This is Where the Header Breaks for Suggestions --><header class="">
 	<nav class="nav row">
 		<div class="sixcol">
 			<h1>
-				<img src="./Spyderfix Results_files/spyderfix.png" alt="Spyderfix. Outspin your competitors.">
+				<img id="logo" src="./Spyderfix Results_files/spyderfix.png" alt="Spyderfix. Outspin your competitors.">
 			</h1>		
 		</div>
 		<div class="sixcol last">
@@ -123,28 +209,30 @@
 					<img src="./Spyderfix Results_files/overall-icon.png"><span>Overall</span></a>
 				</li>
 				<li>
-					<a id="nav2" href="file://localhost/Users/alyson/Websites/Spyderfix/index.html#betaAlphaSpeed" class="tooltip">
+					<a id="nav2" href="file://localhost/Users/alyson/Websites/Spyderfix/Spyderfix Results.html#betaAlphaSpeed" class="tooltip">
 					<img src="./Spyderfix Results_files/speed-icon.png"><span>Speed</span></a>
 				</li>
 				<li>
-					<a id="nav3" href="file://localhost/Users/alyson/Websites/Spyderfix/index.html#deltaAlphaSeo" class="tooltip">
+					<a id="nav3" href="file://localhost/Users/alyson/Websites/Spyderfix/Spyderfix Results.html#deltaAlphaSeo" class="tooltip">
 					<img src="./Spyderfix Results_files/seo-icon.png"><span>SEO</span></a>	
 				</li>
 				<li>
-					<a id="nav4" href="file://localhost/Users/alyson/Websites/Spyderfix/index.html#gammaAlphaPPC" class="tooltip">
+					<a id="nav4" href="file://localhost/Users/alyson/Websites/Spyderfix/Spyderfix Results.html#gammaAlphaPPC" class="tooltip">
 					<img src="./Spyderfix Results_files/ppc-icon.png"><span>PPC</span></a>		
 				</li>
 				<li>
-					<a id="nav5" href="file://localhost/Users/alyson/Websites/Spyderfix/index.html#lambdaAlphaSocial" class="tooltip">
+					<a id="nav5" href="file://localhost/Users/alyson/Websites/Spyderfix/Spyderfix Results.html#lambdaAlphaSocial" class="tooltip">
 					<img src="./Spyderfix Results_files/social-media-icon.png"><span>Social</span></a>
 				</li>
 				<li>
-					<a id="nav6" href="file://localhost/Users/alyson/Websites/Spyderfix/index.html#omegaAlphaRender" class="tooltip">
+					<a id="nav6" href="file://localhost/Users/alyson/Websites/Spyderfix/Spyderfix Results.html#omegaAlphaRender" class="tooltip">
 					<img src="./Spyderfix Results_files/display-icon.png"><span>Display</span></a>
 				</li>
 			</ul>
 		</div>
-		<div id="pasteHere" class="twelvecol"></div>
+		<div id="pasteHere" class="twelvecol">REPORT FOR HTTP://WWW.PARADISEGREENS.COM IN 85260<BR>
+MONDAY, JULY 29, 2013 4:13 PM
+</div>
 		<div style="clear:both"></div>
 	</nav>
 </header><div id="mainWrap">
