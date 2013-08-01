@@ -1,0 +1,61 @@
+
+#socialMentions. #socialMentions2{
+    clear: both;
+    display: block;
+}
+
+#recentMentions, #recentMentions2 {
+	/* The unordered list that is to be split into pages */
+	overflow:hidden;
+	position:relative;
+	padding-bottom:10px;
+}
+
+.swControls{
+    display: inline-block;
+    margin-left: 6% !important;
+    position: relative;
+    right: 0;
+    width: 88%;
+}
+
+a.swShowPage{
+    background-color: #444444;
+    border-radius: 30px 30px 30px 30px;
+    color: white;
+    float: left;
+    font-size: 12px;
+    height: 25px;
+    line-height: 26px;
+    margin: 4px;
+    text-align: center;
+    width: 25px;
+}
+
+a.swShowPage:hover,
+a.swShowPage.active{
+	background-color:#2993dd;
+	
+	/*	CSS3 inner shadow */
+	
+	-moz-box-shadow:0 0 7px #1e435d inset;
+	/*-webkit-box-shadow:0 0 7px #1e435d inset;*/
+	box-shadow:0 0 7px #1e435d inset;
+}
+
+#recentMentions li, #recentMentions2 li{
+    float: left;
+}
+
+.select  {
+	background: #ddd;
+	border-radius: 10px;
+	padding: 20px;
+}
+
+
+	#recentMentions a, #recentMentions2 a{
+
+		vertical-align: middle;
+		text-decoration: none;
+	}
