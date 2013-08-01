@@ -55,8 +55,20 @@ padding-bottom: 90px;
 }
 .summary{
 	font-family:'Open Sans';
-	font-size:14px;
+	font-size:16px;
 	font-weight:bold;
+}
+
+.big-number {
+	padding: 0px 60px 0px 14px;
+	font-size: 34px;
+	color:#99ca3c;
+}
+.percents {float:right}
+
+.total-fail {
+	font-size: 24px;
+	float:right;
 }
 
 #ui-accordion-1-header-0{
