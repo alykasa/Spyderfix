@@ -375,51 +375,51 @@ http://www.paradisegreens.com/2013/06/having-a-green-lawn-in-arizona-without-wat
 	
 </div>	
 <script>
-	function UpdateTableHeaders() {
-   $(".persist-area").each(function() {
+// 	function UpdateTableHeaders() {
+//    $(".persist-area").each(function() {
    
-       var el             = $(this),
-           offset         = el.offset(),
-           scrollTop      = $(window).scrollTop(),
-           floatingHeader = $(".floatingHeader", this)
+//        var el             = $(this),
+//            offset         = el.offset(),
+//            scrollTop      = $(window).scrollTop(),
+//            floatingHeader = $(".floatingHeader", this)
        
-       if ((scrollTop > offset.top) && (scrollTop < offset.top + el.height())) {
-           floatingHeader.css({
-            "visibility": "visible"
-           });
-       } else {
-           floatingHeader.css({
-            "visibility": "hidden"
-           });      
-       };
-   });
-}
+//        if ((scrollTop > offset.top) && (scrollTop < offset.top + el.height())) {
+//            floatingHeader.css({
+//             "visibility": "visible"
+//            });
+//        } else {
+//            floatingHeader.css({
+//             "visibility": "hidden"
+//            });      
+//        };
+//    });
+// }
 
-// DOM Ready      
-$(function() {
+// // DOM Ready      
+// $(function() {
 
-   var clonedHeaderRow;
+//    var clonedHeaderRow;
 
-   $(".persist-area").each(function() {
-       clonedHeaderRow = $(".persist-header", this);
+//    $(".persist-area").each(function() {
+//        clonedHeaderRow = $(".persist-header", this);
 
-       clonedHeaderRow.clone()
-       	.prependTo("article")
+//        clonedHeaderRow.clone()
+//        	.prependTo("article")
        	
-       // $("article", this)
-       // 	.prepend(clonedHeaderRow.clone())
-       // clonedHeaderRow
-         // .before(clonedHeaderRow.clone())
-         .css("width", clonedHeaderRow.width())
-         .addClass("floatingHeader");
+//        // $("article", this)
+//        // 	.prepend(clonedHeaderRow.clone())
+//        // clonedHeaderRow
+//          // .before(clonedHeaderRow.clone())
+//          .css("width", clonedHeaderRow.width())
+//          .addClass("floatingHeader");
          
-   });
+//    });
    
-   $(window)
-    .scroll(UpdateTableHeaders)
-    .trigger("scroll");
+//    $(window)
+//     .scroll(UpdateTableHeaders)
+//     .trigger("scroll");
    
-});
+// });
 </script>
 </body>
 </html>

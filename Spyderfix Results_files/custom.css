@@ -1,0 +1,46 @@
+/*####################################################################
+########## Add Custom Code Here That Will Override Main Styles.css
+#####################################################################*/
+
+h2.blockTitle{
+	font-weight: normal;
+	text-shadow:none;
+	height: 35px;
+	color: #FFF;
+	border-bottom: 5px solid #04647C;
+	background: #00B6E4;
+	font-family: 'Bebas Neue';
+}
+.floatingHeader {
+  position: fixed;
+  top: 0;
+  visibility: hidden;
+}
+.nav.row{
+	background-color:#fff;
+}
+#mainWrap, body{
+	font-family:'Open Sans';
+}
+.persist-header{
+	font-family: 'Bebas Neue';
+text-align: left;
+padding: 10px 20px;
+display: block;
+background-color: #D6F3F8;
+border-top: 1px solid #FFF;
+border-bottom: 1px solid #009BC2;
+}
+#alphaOverall{
+	margin-top:0;
+}
+.block {
+	margin-bottom: 0;
+	border-radius:0;
+padding-bottom: 90px;
+}
+.summary{
+	font-family:'Open Sans';
+	font-size:14px;
+	font-weight:bold;
+}
