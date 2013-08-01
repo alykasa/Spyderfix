@@ -118,7 +118,9 @@ $(window).scroll(function(){
         {
             $('.nav.row').data('size','small');
             $('.nav.row').stop().animate({
-                height:'70px'
+                height:'70px',
+                borderBottomLeftRadius: 0, 
+    			borderBottomRightRadius: 0
             },500);
             $('#logo').stop().animate({
                 height:'30px'
@@ -138,7 +140,9 @@ $(window).scroll(function(){
         {
             $('.nav.row').data('size','big');
             $('.nav.row').stop().animate({
-                height:'143px'
+                height:'143px',
+                borderBottomLeftRadius: 10, 
+    			borderBottomRightRadius: 10
             },500);
             $('#logo').stop().animate({
                 height:'66px'
@@ -155,19 +159,36 @@ $(window).scroll(function(){
 
 // STICKY HEADERS
 function UpdateTableHeaders() {
+
+
+
    $(".persist-area").each(function() {
    
        var el             = $(this),
            offset         = el.offset(),
            scrollTop      = $(window).scrollTop(),
-           floatingHeader = $(".persist-header", this);
+           floatingHeader = $(".persist-header", this),
+           bodyWidth	  = $("#body").width() - 40;
        
-       if ((scrollTop > offset.top) && (scrollTop < offset.top + el.height()) && (floatingHeader.hasClass('ui-accordion-header-active'))) {
-           floatingHeader.addClass("floatingHeader");//.css({
+       if ((scrollTop > offset.top - 90) && (scrollTop < offset.top + el.height()) && (floatingHeader.hasClass('ui-accordion-header-active'))) {
+           
+       		floatingHeader.css({
+       			position: 'fixed',
+				top: '90px',
+				width: bodyWidth,
+				zIndex: '1000'
+       		});
+           //floatingHeader.addClass("floatingHeader");//.css({
            //  "visibility": "visible"
            // });
        } else {
-           floatingHeader.removeClass("floatingHeader");//.css({
+
+       		floatingHeader.css({
+       			position: 'relative',
+				top: '0',
+				//width: '100%'
+       		});
+           // floatingHeader.removeClass("floatingHeader");//.css({
            //  "visibility": "hidden"
            // });      
        };
