@@ -19,6 +19,7 @@ h2.blockTitle{
 .nav.row{
 	background-color:#fff;
 	padding: 10px 0;
+	box-shadow: 0 0 10px rgba(100, 100, 100, 0.3);
 }
 #mainWrap, body{
 	font-family:'Open Sans';
@@ -28,9 +29,12 @@ h2.blockTitle{
 text-align: left;
 padding: 10px 20px;
 display: block;
-background-color: #D6F3F8;
+color: #00AEEF;
+font-weight: normal;
+background-color: #FFF;
 border-top: 1px solid #FFF;
-border-bottom: 1px solid #009BC2;
+border-bottom: 1px solid #DBDBDB;
+
 }
 #alphaOverall{
 	margin-top:0;
@@ -52,6 +56,9 @@ padding-bottom: 90px;
 #ui-accordion-17-header-0{
 	border-radius: 0 0 10px 10px;
 }
+#ui-accordion-1-header-0.ui-accordion-header-active,  #ui-accordion-17-header-0.ui-accordion-header-active{
+	border-radius:0 0 0 0;
+}
 .nav img {
 	float:left;
 }
@@ -72,5 +79,41 @@ padding-top: 60px;
 }
 .floatingHeader{
 	position: fixed;
-top: 90px;
+	top: 90px;
 }
+.ui-state-active {
+	border-top: 1px solid #99CA3C;
+	color:#fff;
+	background-color: #99CA3C;
+}
+#miniScores figcaption, section p, .blockDesc, h3.criticalList span, dt.criticalList span  {
+font-family: 'Open Sans';
+}
+.numericalData.value{
+	font-family:Arvo;
+}
+figcaption h3, .smRecentPosts h3, h3{
+	font-family:'Bebas Neue';
+}
+
+#omegaAlphaRender .ipad div{
+	background: url('ipad.png');
+}
+#omegaAlphaRender .firefox div {
+background: url('firefox.png');
+}
+#omegaAlphaRender .safari div {
+background: url('safari.png');
+
+}
+#omegaAlphaRender .iphone div {
+background: url('iphone.png')
+}
+#omegaAlphaRender .nexus div {
+background: url('nexus.png');
+}
+.minimac div {
+background: url('minimac350.png');
+}
+
+

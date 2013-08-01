@@ -125,10 +125,10 @@ $(window).scroll(function(){
             $('#logo').stop().animate({
                 height:'30px'
             },500);
-            $('.nav.row .tooltip img').stop().animate({
-                height:'30px',
-                padding: '0'
-            },500);
+            // $('.nav.row .tooltip img').stop().animate({
+            //     height:'30px',
+            //     padding: '0'
+            // },500);
             $('#pasteHere').stop().animate({
                 fontSize: '12px'
             },500);
@@ -170,27 +170,22 @@ function UpdateTableHeaders() {
            floatingHeader = $(".persist-header", this),
            bodyWidth	  = $("#body").width() - 40;
        
-       if ((scrollTop > offset.top - 90) && (scrollTop < offset.top + el.height()) && (floatingHeader.hasClass('ui-accordion-header-active'))) {
+       if ((scrollTop > offset.top - 92) && (scrollTop < offset.top + el.height() - 92) && (floatingHeader.hasClass('ui-accordion-header-active'))) {
            
        		floatingHeader.css({
        			position: 'fixed',
-				top: '90px',
+				top: '92px',
 				width: bodyWidth,
-				zIndex: '1000'
+				zIndex: '100'
        		});
-           //floatingHeader.addClass("floatingHeader");//.css({
-           //  "visibility": "visible"
-           // });
+           
        } else {
 
        		floatingHeader.css({
        			position: 'relative',
-				top: '0',
-				//width: '100%'
+				top: '0'
        		});
-           // floatingHeader.removeClass("floatingHeader");//.css({
-           //  "visibility": "hidden"
-           // });      
+             
        };
    });
 }
@@ -198,16 +193,7 @@ function UpdateTableHeaders() {
 // DOM Ready      
 $(function() {
 
-   // var clonedHeaderRow;
-
-   // $(".persist-area").each(function() {
-   //     clonedHeaderRow = $(".persist-header", this);
-   //     // clonedHeaderRow
-   //       //.before(clonedHeaderRow.clone())
-   //       //.css("width", clonedHeaderRow.width())
-   //       // .addClass("floatingHeader");
-         
-   // });
+  
    
    $(window)
     .scroll(UpdateTableHeaders)
