@@ -42,6 +42,8 @@ border-bottom: 1px solid #DBDBDB;
 	border-top: 1px solid #99CA3C;
 	color:#fff;
 	background-color: #99CA3C;
+	border-bottom: 5px solid #6B9913;
+	padding-bottom: 5px;
 }
 #alphaOverall{
 	margin-top:0;
@@ -119,5 +121,98 @@ background: url('nexus.png');
 .minimac div {
 background: url('minimac350.png');
 }
+.blockDesc {
+	background-color:#fff;
+	width: 90%;
+	float: none;
+	margin: 20px auto;
+}
+.largeScore img{
+	margin-top:50px;
+	margin-left: 100px;
+}
+.percentage .comment{
+	display:none;
+}
+article.first{
+	padding-top: 80px;
+}
+.timestamp {
+color: #00AEEF;
+font-weight: bold;
+margin-left: 50px;
+}
+h3.criticalList span{
+font-family: 'Bebas Neue';
+margin-left: -40px;
+color: #00AEEF;
+font-weight:normal;
+}
+.author {
+	text-align: right;
 
-
+}
+.placerow {
+	text-align: left;
+	margin-bottom: 30px;
+}
+ul.simpleTabsNavigation {
+margin: 0 0px;
+font-family: 'Bebas Neue';
+color: #00AEEF;
+font-weight: normal;
+font-size: 24px;
+}
+ul.simpleTabsNavigation a, ul.simpleTabsNavigation li a.current {
+font-family: 'Bebas Neue';
+color: #00AEEF;
+font-weight: normal;
+font-size: 24px;
+}
+.rankTable .label, .rankTable th.url {
+font-family: 'Open Sans';
+font-weight: normal;
+}
+.simpleTabsContent{
+	background-color:#fff;
+}
+.rankTable tbody tr:nth-child(odd) {
+background: #D5EDF6;
+}
+#google-results li{
+	
+	margin: 5px;
+background-color: #FFF;
+float: left;
+padding: 10px;
+list-style-type: none;
+border-radius: 5px 5px 0 0;
+}
+#google-results li a{
+	text-decoration: none;
+}
+a{
+	color:#00aeef;
+}
+.google-numbers .twelvecol {
+background-color: #FFF;
+width: 100%;
+float: left;
+text-align: left;
+padding: 10px;
+margin-bottom: 5px;
+}
+.value{
+	font-family: Arvo;
+}
+.ad-box2{
+	background-color: #FFF;
+padding: 30px;
+width: 38%;
+}
+.ad-box2 .title b{
+	font-family: 'Bebas Neue';
+font-weight: normal;
+color: #99CA3C;
+font-size: 24px;
+}
